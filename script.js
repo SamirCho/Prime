@@ -6,14 +6,14 @@ function isPrime(num) {
       if(num<0){
           num*=-1
       }
-      var isPrime = true;
+      let isPrime = true;
         if (num == 1 || num == 0) {
           return false
         } else {
           if (num == 2 || num == 3) {
             return true
           } else {
-            for (var i = 2; i < num; i++) {
+            for (let i = 2; i < num; i++) {
               if (num % i == 0) {
                 isPrime = false;
               }
