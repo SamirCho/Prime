@@ -1,5 +1,15 @@
+let amount=10
+
 function isPrime(num){
-  num=parseInt(num)
+  if(isNaN(num)){
+    return false
+  }
+  if(Math.floor(num)!=num){
+    return isPrime(Math.floor(num))
+  }
+  if(num<0){
+    return isPrime(-num)
+  }
   if(num==0||num==1){
     return false
   }
@@ -15,7 +25,7 @@ function isPrime(num){
   }
 }
 
-for (let i = 0; i < 1000; i++) {
+for (let i = -amount; i < amount; i++) {
   if(isPrime(i)){
     console.log(i)
   }
